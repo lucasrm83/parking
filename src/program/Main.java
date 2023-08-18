@@ -28,11 +28,12 @@ public class Main {
         CarRental carRental = new CarRental(pickup,carReturn,new Vehicle(model));
         RentalService rentalService = new RentalService(pricePerHour,pricePerDay,new BrazilTaxService());
         rentalService.processInvoice(carRental);
+        System.out.println(carRental.getInvoice().toString());
 
-        System.out.println("Invoice: ");
+        /*System.out.println("Invoice: ");
         System.out.println("Basice payment: "+String.format("%.2f", carRental.getInvoice().getBasicPayment()));
         System.out.println("Tax: "+String.format("%.2f",carRental.getInvoice().getTax()));
-        System.out.println("Total payment: "+String.format("%.2f",carRental.getInvoice().getTotalPayment()));
+        System.out.println("Total payment: "+String.format("%.2f",carRental.getInvoice().getTotalPayment()));*/
 
 
         sc.close();

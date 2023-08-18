@@ -30,4 +30,10 @@ public class Invoice {
     public Double getTotalPayment(){
         return getBasicPayment()+getTax();
     }
+    public String toString(){
+        return "Invoice: \n"+
+        "Basice payment: "+String.format("%.2f", getBasicPayment())+"\n"+
+        "Tax: "+String.format("%.2f", getTax())+"\n"+
+        "Total payment: "+String.format("%.2f",getTotalPayment());
+    }
 }
